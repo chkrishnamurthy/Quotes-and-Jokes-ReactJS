@@ -6,7 +6,7 @@ function Quotes(){
 const [quotes,setquotes] = useState("");
 const [color,setColor] = useState("white");
 
-let colors = ["#FF0000","#0000FF","#800080","#FFFF00","#008000","#85C1E9","#2E4053","#1D8348"]
+let colors = ["#FF0000","#FF00FF","#800080","#00008B","#008000"];
 
 useEffect(()=>{
     GetQuote();

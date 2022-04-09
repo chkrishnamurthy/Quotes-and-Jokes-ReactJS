@@ -7,32 +7,35 @@ import Jokes from './Jokes'
 
 function App() {
   const [concept,setConcept] = useState(false);
-  // const [darkMode,setDlarkMode] = useState(false);
+  const [darkMode,setDarkMode] = useState(false);
 
 const conceptChnageHandler = ()=>{
   setConcept(!concept);
 }
 
+const themeChangeHandler = ()=>{
+  setDarkMode(!darkMode);
+
+}
+
 
 
   return (
-  <div className="App"> 
+  <div  className={darkMode?"dark":"light"} > 
+  
     <div className="flex-end">
     <button type="button" className="btn" onClick={conceptChnageHandler}>{(concept)?"Jokes":"Quotes"}</button>
 
         
 {/*  */}
           <label className="switch">
-            <input type="checkbox" />
+            <input type="checkbox" onChange={themeChangeHandler} />
             <span className="slider round"> </span>
           </label>
         </div>
       <div>
 {/*  */}
-    <div>
-      <img />
-    </div>
-        {/* <input type="checkbox" />Theme */}
+  
       </div>
 {(concept)?<Quotes />:<Jokes />}
  </div>
