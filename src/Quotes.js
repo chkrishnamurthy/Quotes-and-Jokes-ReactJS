@@ -18,15 +18,12 @@ const GetQuote = ()=>{
   .then((data)=>{
     setquotes(data[Math.ceil((Math.random())*data.length-1)]);
     setColor(colors[Math.ceil((Math.random())*colors.length-1)])
-    console.log(color);
   })
-
-  
 }
 
     return (
         <div className='quote'>
-                      <div className='headline'>Quotes</div>
+<div className='headline'>Quotes</div>
       <div className="joke_line">
     <p style={{color:`${color}`}} >{quotes.text}</p>
     <p className='author_text'>{quotes.author}</p>

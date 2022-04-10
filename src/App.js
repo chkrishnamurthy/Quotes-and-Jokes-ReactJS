@@ -3,6 +3,7 @@ import React,{useState,useEffect}from 'react';
 
 import Quotes from './Quotes';
 import Jokes from './Jokes'
+import profile from './assets/profile.jpg'
 
 
 function App() {
@@ -26,15 +27,16 @@ const themeChangeHandler = ()=>{
     <div className="flex-end">
     <button type="button" className="btn" onClick={conceptChnageHandler}>{(concept)?"Jokes":"Quotes"}</button>
 
-        
-{/*  */}
           <label className="switch">
             <input type="checkbox" onChange={themeChangeHandler} />
             <span className="slider round"> </span>
           </label>
+          <div className='test'>
+            <img src={profile} />
+         
+          </div>
         </div>
       <div>
-{/*  */}
   
       </div>
 {(concept)?<Quotes />:<Jokes />}

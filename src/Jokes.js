@@ -1,12 +1,12 @@
 import React,{useState,useEffect} from 'react';
 import './App.css';
-
+import colors from './colors'
 
 function Jokes(){
 const [joke,setJoke] = useState("");
 const [color,setColor] = useState("white");
 
-let colors = ["#FF0000","#FF00FF","#800080","#00008B","#008000"];
+// let colors = ["#FF0000","#FF00FF","#800080","#00008B","#008000"];
 
 useEffect(()=>{
     GetJokes();
@@ -26,7 +26,6 @@ useEffect(()=>{
 
     return (
         <div className='quote'>
-            {/* <h4>Jokes</h4> */}
             <div className='headline'>Jokes</div>
     <p  style={{color:`${color}`}} className="joke_text">{joke}</p>
     <div className='btnDiv'>
